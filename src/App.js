@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const getData = async () => {
       const url = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&type=movie&s=${searchTerm}`;
-      
+
       const moviesData = await fetch(url)
                               .then((response) => response.json())
                               .then((data) => data)
@@ -29,7 +29,6 @@ function App() {
   }, [searchTerm]);
 
   const handleClick = (movie) => {
-    console.log('movie: ', movie);
     const movieFound = nominatedMovies.some(nm => nm.imdbID === movie.imdbID);
 
     if (movieFound) {
@@ -96,7 +95,8 @@ function Movie ({m, nms, buttonText, handleClick}) {
       </p>
       <button 
       onClick={() => handleClick(m)} 
-      disabled={(buttonText==="Nominate") && (nms.length === 5 || nms.some(nm => nm.imdbID === m.imdbID))}>
+      disabled={(buttonText==="Nominate") 
+                && (nms.length === 5 || nms.some(nm => nm.imdbID === m.imdbID))}>
       {buttonText}
       </button>
     </div>

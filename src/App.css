@@ -19,7 +19,10 @@ body {
   padding: 1rem;
   background-color: #fff;
   border-radius: .25rem;
-  margin: 0 auto;
+  margin: 1rem auto;
+  -webkit-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.1);
 }
 
 .search input {
@@ -56,6 +59,9 @@ body {
   border-radius: .25rem;
   margin-top: 2rem;
   padding: 1rem;
+  -webkit-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.1);
 }
 
 .allMovies > div:last-child {
