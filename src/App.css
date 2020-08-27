@@ -1,38 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2rem;
+  background-color: #f0f8ff;
+}
+
 .App {
-  text-align: center;
+  min-height: 80vh;
+  width: 60vw;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: .25rem;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search input {
+  height: 2rem;
+  width: 100%;
+  padding: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie {
   display: flex;
-  flex-direction: column;
+  margin-bottom: 1rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.movie button {
+  margin-left: 1rem;
+  height: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.movie img {
+  margin-right: 1rem;
+  width: 8rem;
+}
+
+.allMovies {
+  display: flex;
+  margin: 0 auto;
+}
+
+.allMovies > div {
+  width: 60%;
+  min-height: 50vh;
+  background-color: #fff;
+  border-radius: .25rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.allMovies > div:last-child {
+  min-height: 20vh;
+  margin-left: 2rem;
+}
+
+
+/* Media queries start here */
+
+@media (max-width:1400px) {
+  .App {
+    width: 80vw;
   }
-  to {
-    transform: rotate(360deg);
+
+  .movie img {
+    width: 7rem;
   }
 }
+
+@media (max-width:600px) {
+  .allMovies {
+    flex-direction: column;
+  }
+
+  .allMovies > div {
+    width: 100%;
+  }
+
+  .movie img {
+    width: 5rem;
+  }
+
+  .allMovies > div:last-child {
+    margin-left: unset;
+  }
+}
+
