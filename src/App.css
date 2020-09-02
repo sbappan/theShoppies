@@ -7,12 +7,18 @@
 body {
   padding: 2rem;
   background-color: #f0f8ff;
+  color: rgba(0, 0, 0, 0.9);
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .App {
-  min-height: 80vh;
+  min-height: 90vh;
   width: 60vw;
   margin: 0 auto;
+}
+
+.App h1, .App h2 {
+  font-family: 'Halant', serif;
 }
 
 .search {
@@ -29,6 +35,11 @@ body {
   height: 2rem;
   width: 100%;
   padding: 1rem;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.App .banner h2 {
+  color: #FF6A88;
 }
 
 .movie {
@@ -39,12 +50,38 @@ body {
 
 .movie button {
   margin-left: 1rem;
-  height: 2rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: .2rem;
+  cursor: pointer;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0 1rem;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(45deg, #8EC5FC 0%, #E0C3FC 100%);
+  color: rgb(0, 0, 128, .8);
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 1rem 2rem 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 1rem 2rem 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 1rem 2rem 0px rgba(0,0,0,0.1);
+}
+
+.movie button:disabled {
+  background-color: rgba(142, 197, 252, 0.6);
+  color: rgba(18, 18, 18, 0.4);
+  cursor: default;
+}
+
+.allMovies > div:last-child .movie button {
+  background-color: #FF9A8B;
+  background-image: linear-gradient(45deg, #FF6A88 0%, #FF9A8B 100%);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .movie img {
   margin-right: 1rem;
-  width: 8rem;
+  width: 5rem;
 }
 
 .allMovies {
@@ -57,11 +94,11 @@ body {
   min-height: 50vh;
   background-color: #fff;
   border-radius: .25rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 1rem;
-  -webkit-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.1);
-  -moz-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.1);
-  box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
 }
 
 .allMovies > div:last-child {
@@ -69,6 +106,14 @@ body {
   margin-left: 2rem;
 }
 
+.allMovies h2 {
+  margin-bottom: 1rem;
+}
+
+.allMovies a {
+  text-decoration: none;
+  color: unset;
+}
 
 /* Media queries start here */
 
@@ -78,7 +123,7 @@ body {
   }
 
   .movie img {
-    width: 7rem;
+    width: 4rem;
   }
 }
 
@@ -92,7 +137,7 @@ body {
   }
 
   .movie img {
-    width: 5rem;
+    width: 3rem;
   }
 
   .allMovies > div:last-child {
