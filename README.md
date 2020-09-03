@@ -1,3 +1,16 @@
+## To run this project locally
+
+Clone the repo and run `npm install`
+
+Get an API key from [OMDB API site](https://omdbapi.com/)
+
+Add a .env file at the root of the project
+
+Add the OMDB API key as an environment variable named `REACT_APP_API_KEY` 
+
+Run `npm start` to run the app
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
